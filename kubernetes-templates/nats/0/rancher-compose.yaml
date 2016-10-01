@@ -6,10 +6,10 @@
     - variable: "NATS_USERNAME"
       label: "NATS Username"
       required: true
-      default: "wordpress"
+      default: "user"
       type: "string"
     - variable: "NATS_PASSWORD"
       label: "NATS Password"
       required: true
-      default: 80
+      default: "pass"
       type: "string"
