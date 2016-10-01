@@ -12,6 +12,18 @@
     - variable: "tls_volume"
       label: "TLS volume name"
       required: true
-      type: int
+      type: string
       default: "tls-volume"
       description: "should be a volume name"
+    - variable: "user"
+      label: "Username"
+      required: false
+      type: string
+      default: ""
+      description: "username"
+    - variable: "pass"
+      label: "Password"
+      required: false
+      type: string
+      default: ""
+      description: "password"
