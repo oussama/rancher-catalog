@@ -1,0 +1,8 @@
+name: NATS
+description: |
+  NATS message queue built with Go
+version: 1.0
+category: mq
+maintainer: Oussama
+license: # The license
+projectURL: http://nats.io/
