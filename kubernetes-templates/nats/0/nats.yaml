@@ -54,3 +54,39 @@ spec:
       - name: tls-volume
         secret:
           secretName: tls-nats
+          
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    name: nats-primary
+  name: nats-primary
+spec:
+  ports:
+    - port: 4222
+      targetPort: 4222
+  selector:
+    name: nats
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+          name: nats-master
+  name: nats-master
+spec:
+  containers:
+    - name: nats-master
+      image: "nats:latest"
+      ports:
+        - containerPort: 4222
+      command:
+        - "--cluster nats://0.0.0.0:6222"
+        - "--user ${user} --pass ${pass}"
+      volumeMounts:
+        - name: tls-volume
+          mountPath: /etc/nats/tls
+  volumes:
+    - name: tls-volume
+      emptyDir: {}
+
