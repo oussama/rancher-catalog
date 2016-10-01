@@ -1,8 +1,4 @@
-name: NATS
-description: |
-  NATS message queue built with Go
-version: 2.8.23-rancher1
-category: mq
-maintainer: Oussama
-license: # The license
-projectURL: http://nats.io/
+name: "NATS"
+description: "Cloud Native, Open Source, High Performance Messaging"
+version: 1.0.0
+category: Messaging
