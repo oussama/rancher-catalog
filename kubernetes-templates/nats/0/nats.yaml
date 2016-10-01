@@ -10,6 +10,11 @@ spec:
       labels:
         component: nats
     spec:
+      ports:
+      - name: ""
+        port:4222
+        protocol: TCP
+        targetPort:4222
       containers:
       - name: nats
         image: nats:latest
