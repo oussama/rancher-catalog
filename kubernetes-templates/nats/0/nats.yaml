@@ -1,14 +1,26 @@
-kind: "Service"
-apiVersion: "v1"
+apiVersion: v1
+kind: Service
 metadata: 
-  name: "nats"
   labels: 
-    app: "nats"
+    name: nats-service
+  name: nats-service
+spec: 
+  ports:
+    - port: 4222
+  selector: 
+    name: nats
+  type: LoadBalancer
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nats
+  labels: 
+    name: nats
 spec: 
   containers: 
-    - name: "nats"
-      image: "nats:latest"
+    - image: nats
+      name: nats
       ports: 
-          port: 4222
-  selector: 
-    app: "nats"
+        - containerPort: 4222
+          name: nats
