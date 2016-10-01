@@ -5,9 +5,10 @@ metadata:
   labels: 
     app: "nats"
 spec: 
-  ports: 
-    - 
-      port: 4222
-      targetPort: "nats-server"
+  containers: 
+    - name: "nats"
+      image: "nats:latest"
+      ports: 
+          port: 4222
   selector: 
     app: "nats"
