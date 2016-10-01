@@ -9,4 +9,4 @@ spec:
     - port: 4222
       targetPort: 4222
       nodePort: 4222
-    type: NodePort
+  type: NodePort
