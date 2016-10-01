@@ -3,13 +3,8 @@
   version: "1.0.0"
   description: ""
   questions:
-    - variable: "NATS_USERNAME"
-      label: "NATS Username"
+    - variable: "NATS_TOKEN"
+      label: "NATS Authentication Token"
       required: true
-      default: "user"
-      type: "string"
-    - variable: "NATS_PASSWORD"
-      label: "NATS Password"
-      required: true
-      default: "pass"
+      default: "NATSAUTHTOKEN"
       type: "string"
