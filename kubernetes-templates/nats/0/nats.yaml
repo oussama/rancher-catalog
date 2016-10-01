@@ -17,6 +17,8 @@ spec:
         volumeMounts:
           - name: tls-volume
             mountPath: /etc/nats/tls
+        selector:
+          secondary: "true"
         env:
         - name: EXTRA
           value: -DV
