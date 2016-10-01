@@ -1,0 +1,21 @@
+kind: "ReplicationController"
+apiVersion: "v1"
+metadata: 
+  name: "nats"
+  labels: 
+    app: "nats"
+spec: 
+  replicas: 1
+  selector: 
+    app: "nats"
+  template: 
+    metadata: 
+      labels: 
+        app: "nats"
+    spec: 
+      containers: 
+        - name: "nats"
+          image: "nats:latest"
+          ports: 
+            - name: "nats-server"
+              containerPort: 4222
