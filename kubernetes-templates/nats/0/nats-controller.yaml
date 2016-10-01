@@ -18,6 +18,7 @@ spec:
             mountPath: /tls
         command:
           - "--cluster nats://0.0.0.0:6222"
+          - "--routes nats://nats:6222"
           - "--user ${user} --pass ${pass}"
       volumes:
         - name: tls-volume
