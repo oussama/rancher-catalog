@@ -21,6 +21,9 @@ spec:
   containers: 
     - image: nats
       name: nats
+      args:
+        - "-DV"
+        - "-auth '${NATS_TOKEN}'"
       ports: 
         - containerPort: 4222
           name: nats
