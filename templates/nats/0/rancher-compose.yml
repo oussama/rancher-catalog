@@ -3,6 +3,11 @@
   version: "1.0.0"
   description: ""
   questions:
+    - variable: "NATS_PORT"
+      label: "NATS Port"
+      required: true
+      default: 4222
+      type: "int"
     - variable: "NATS_TOKEN"
       label: "NATS Authentication Token"
       required: true
