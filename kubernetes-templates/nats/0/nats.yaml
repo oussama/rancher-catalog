@@ -2,41 +2,25 @@ apiVersion: v1
 kind: Service
 metadata: 
   labels: 
-    name: nats-service
-  name: nats-service
+    name: nats
+  name: nats
 spec: 
   ports:
     - port: 4222
   selector: 
-    name: natsp
+    name: nats-pod
   type: LoadBalancer
 ---
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nats
+  name: nats-pod
   labels: 
-    name: nats
+    name: nats-pod
 spec: 
   containers: 
     - image: nats
-      name: nats
-      command: ["gnatsd", "-cluster", "nats://0.0.0.0:4248", "-DV"]
+      name: nats-pod
       ports: 
         - containerPort: 4222
-          name: nats
----
-apiVersion: v1
-kind: Pod
-metadata:
-  name: natsp
-  labels: 
-    name: natsp
-spec: 
-  containers: 
-    - image: nats
-      name: natsp
-      command: ["gnatsd", "-DV" , "--auth","${NATS_TOKEN}","-routes", "nats://nats:4248"]
-      ports: 
-        - containerPort: 4222
-          name: natsp
+          name: nats-pod
