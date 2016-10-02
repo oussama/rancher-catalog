@@ -1,0 +1,4 @@
+nats:
+  image: nats
+  ports:
+  - ${NATS_PORT}:4222
