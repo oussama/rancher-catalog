@@ -1,0 +1,4 @@
+name: "NATS"
+description: "Cloud Native, Open Source, High Performance Messaging"
+version: 1.0.0
+category: Messaging
