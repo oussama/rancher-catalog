@@ -1,0 +1,10 @@
+.catalog:
+  name: "NATS"
+  version: "1.0.0"
+  description: ""
+  questions:
+    - variable: "NATS_TOKEN"
+      label: "NATS Authentication Token"
+      required: true
+      default: "NATSAUTHTOKEN"
+      type: "string"
