@@ -1,0 +1,16 @@
+.catalog:
+  name: Gitlab Runner
+  version: 3.2-rancher1
+  description: Gitlab Runner
+  questions:
+    - variable: "TOKEN"
+      label: "Registration Token"
+      required: true
+      type: string
+      description: "Registration Token"
+    - variable: "CHECK_INTERVAL"
+      label: "check_interval"
+      required: true
+      type: int
+      default: 60
+      description: "check_interval"
