@@ -1,0 +1,4 @@
+name: "Gitlab Runner"
+description: "GitLab Runner is the open source project that is used to run your jobs and send the results back to GitLab"
+version: 1.0.0
+category: CI
