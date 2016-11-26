@@ -34,7 +34,7 @@ spec:
       containers:
       - args:
         - run
-        image: gitlab/gitlab-runner:latest
+        image: gitlab/gitlab-runner:alpine-bleeding
         imagePullPolicy: Always
         name: gitlab-runner
         volumeMounts:
