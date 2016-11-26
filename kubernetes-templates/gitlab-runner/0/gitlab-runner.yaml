@@ -6,7 +6,7 @@ metadata:
 data:
   config.toml: |
     concurrent = 4
-
+    check_interval = ${CHECK_INTERVAL}
     [[runners]]
       name = "Kubernetes Runner"
       url = "https://gitlab.com/ci"
